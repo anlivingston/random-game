@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Game Generator</title>
+</head>
+<body>
+	<h1>Random Game Generator</h1>
+
+	<div id="game"></div>
+
+	<script>
+		// Define an array of game titles and genres
+		var games = [
+			{
+				title: "The Legend of Zelda: Breath of the Wild",
+				genre: "Action-adventure"
+			},
+			{
+				title: "Portal 2",
+				genre: "Puzzle-platformer"
+			},
+			{
+				title: "Minecraft",
+				genre: "Sandbox"
+			},
+			{
+				title: "Overwatch",
+				genre: "Hero shooter"
+			},
+			{
+				title: "Dark Souls III",
+				genre: "Action role-playing"
+			},
+			{
+				title: "Fortnite",
+				genre: "Battle royale"
+			}
+		];
+
+		// Get a random index from the games array
+		var randomIndex = Math.floor(Math.random() * games.length);
+
+		// Get the title and genre of the random game
+		var gameTitle = games[randomIndex].title;
+		var gameGenre = games[randomIndex].genre;
+
+		// Display the game title and genre on the page
+		document.getElementById("game").innerHTML = "<h2>" + gameTitle + "</h2><p>Genre: " + gameGenre + "</p>";
+	</script>
+</body>
+</html>
